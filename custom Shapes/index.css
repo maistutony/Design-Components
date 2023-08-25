@@ -1,0 +1,37 @@
+.main {
+    background-color: rgb(79, 81, 135);
+    height: 100vh;
+}
+
+.hero-section {
+    margin-top: 60px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #11276e;
+    border-radius: 10px;
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    /* Adjust this value to control the curve's position */
+    width: 70px;
+    /* Adjust this value to control the width of the curve */
+    height: 80px;
+    /* Adjust this value to control the height of the curve */
+    background-color: #9e1010;
+    border-radius: 30px;
+}
+
+.hero-section::before {
+    left: calc(50% - 50px);
+    /* Position the left curve */
+}
+
+.hero-section::after {
+    right: calc(50% - 50px);
+    /* Position the right curve */
+}

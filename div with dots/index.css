@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.textured-box {
+    width: 300px;
+    height: 300px;
+    background-color: #324b85;
+    /* Background color of the box */
+    position: relative;
+}
+
+.textured-box::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    background-image: radial-gradient(#000 2px, transparent 2px);
+    /* Dotted pattern */
+    background-size: 10px 10px;
+    /* Adjust the size of the dots */
+    pointer-events: none;
+    /* Allows clicks to pass through the pseudo-element */
+}
+
+.textured-box::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    background-image: radial-gradient(#000 2px, transparent 2px);
+    /* Dotted pattern */
+    background-size: 10px 10px;
+    /* Adjust the size of the dots */
+    pointer-events: none;
+    /* Allows clicks to pass through the pseudo-element */
+}
